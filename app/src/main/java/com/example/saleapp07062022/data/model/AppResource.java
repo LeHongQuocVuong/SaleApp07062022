@@ -1,6 +1,6 @@
-package com.example.saleapp07062022.data.remote.dto;
+package com.example.saleapp07062022.data.model;
 
-public class AppResource<T> {
+public class AppResource <T>{
     public T data;
     public String message;
     public Status status;
