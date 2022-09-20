@@ -1,6 +1,7 @@
 package com.example.saleapp07062022.data.remote;
 
 import com.example.saleapp07062022.data.remote.dto.AppResponse;
+import com.example.saleapp07062022.data.remote.dto.CartDTO;
 import com.example.saleapp07062022.data.remote.dto.ProductDTO;
 import com.example.saleapp07062022.data.remote.dto.UserDTO;
 
@@ -21,5 +22,11 @@ public interface ApiService {
 
     @GET("product")
     Call<AppResponse<List<ProductDTO>>> getProducts();
+
+    @GET("cart")
+    Call<AppResponse<CartDTO>> getCart();
+
+    @POST("cart/add")
+    Call<AppResponse<CartDTO>> addToCart(@Body HashMap<String, Object> body);
 
 }
